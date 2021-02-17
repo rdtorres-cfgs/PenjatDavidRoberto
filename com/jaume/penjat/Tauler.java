@@ -37,7 +37,7 @@ public class Tauler {
     public void setIntentsInicials(int intentsInicials) {
         this.intentsInicials = intentsInicials;
     }    
-	public void inicialitzarPartida(String paraula, int parseInt) {
+	public void inicialitzarPartida(String paraula, int num) {
         paraulaSecreta = paraula.toCharArray();
         paraulaEndevinada = new String[getParaulaSecreta().length];
         for (int i = 0;i<paraulaEndevinada.length;i++) {
@@ -91,14 +91,14 @@ public class Tauler {
             return "Lletra incorrecte";
         }
         else {
-            boolean trobada = false;
+            boolean encert = false;
             for (int i = 0; i < paraulaSecreta.length; i++){
                 if (paraulaSecreta[i] == lletra.charAt(0)) {
                     paraulaEndevinada[i] = lletra;
-                    trobada = true;
+                    encert = true;
                 }
             }
-            if (!trobada) {
+            if (!encert) {
                 intents--;
             }
             return "";
