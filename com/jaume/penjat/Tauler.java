@@ -38,6 +38,13 @@ public class Tauler {
         this.intentsInicials = intentsInicials;
     }    
 	public void inicialitzarPartida(String paraula, int parseInt) {
+        paraulaSecreta = paraula.toCharArray();
+        paraulaEndevinada = new String[getParaulaSecreta().length];
+        for (int i = 0;i<paraulaEndevinada.length;i++) {
+            paraulaEndevinada[i] = null ;
+        }
+        intents = num;
+        intentsInicials = num;
     }
 
     public boolean imprimir() {
