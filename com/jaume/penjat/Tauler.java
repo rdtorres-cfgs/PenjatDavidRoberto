@@ -47,7 +47,7 @@ public class Tauler {
         intentsInicials = num;
     }
 
-    public  imprimir() {
+    public  String imprimir() {
 		String auxiliar = "";
         for (int i = 0;i<paraulaEndevinada.length;i++) {
             if (paraulaEndevinada[i] == null){
