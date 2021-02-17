@@ -36,5 +36,19 @@ public class Tauler {
 
     public void setIntentsInicials(int intentsInicials) {
         this.intentsInicials = intentsInicials;
+    }    
+	public void inicialitzarPartida(String paraula, int parseInt) {
+    }
+
+    public boolean imprimir() {
+    }
+
+    public boolean hasGuanyat() {
+    }
+
+    public boolean imprimirVides() {
+    }
+
+    public boolean verificar(String letra) {
     }
 }
