@@ -47,7 +47,16 @@ public class Tauler {
         intentsInicials = num;
     }
 
-    public boolean imprimir() {
+    public  imprimir() {
+		String auxiliar = "";
+        for (int i = 0;i<paraulaEndevinada.length;i++) {
+            if (paraulaEndevinada[i] == null){
+                auxiliar = auxiliar + "_";
+            }else{
+                auxiliar = auxiliar + paraulaEndevinada[i];
+            }
+        }
+        return auxiliar;
     }
 
     public boolean hasGuanyat() {
@@ -60,9 +69,39 @@ public class Tauler {
         return guanyat;
     }
 
-    public boolean imprimirVides() {
+    public String imprimirVides(){
+        if (intents == 1){
+            return imprimirVidesSingular();
+        }
+        else {
+            return imprimirVidesPlural();
+        }
+    }
+	
+	private String imprimirVidesSingular(){
+        return ("Et queda 1 vida de " + String.valueOf(intentsInicials));
     }
 
-    public boolean verificar(String letra) {
+    private String imprimirVidesPlural() {
+        return ("Et queden " + String.valueOf(intents) + " de " + String.valueOf(intentsInicials));
+    }
+
+    public String verificar(String lletra){
+        if(lletra.length() != 1){
+            return "Lletra incorrecte";
+        }
+        else {
+            boolean trobada = false;
+            for (int i = 0; i < paraulaSecreta.length; i++){
+                if (paraulaSecreta[i] == lletra.charAt(0)) {
+                    paraulaEndevinada[i] = lletra;
+                    trobada = true;
+                }
+            }
+            if (!trobada) {
+                intents--;
+            }
+            return "";
+        }
     }
 }
