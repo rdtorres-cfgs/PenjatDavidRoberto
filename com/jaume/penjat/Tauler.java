@@ -51,6 +51,13 @@ public class Tauler {
     }
 
     public boolean hasGuanyat() {
+		        boolean guanyat = true;
+        for (int i = 0;(i<paraulaEndevinada.length) && (guanyat);i++) {
+            if (paraulaEndevinada[i].charAt(0) != paraulaSecreta[i]) {
+                guanyat = false;
+            }
+        }
+        return guanyat;
     }
 
     public boolean imprimirVides() {
